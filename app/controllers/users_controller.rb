@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
   def get_something
-    render json: false
+    render json: {success: true, something: "Yes" }
   end
 
   # GET /users
