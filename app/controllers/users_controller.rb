@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
   def get_something
-    render json: "Successfully requesting from Rails api only application."
+    render json: false
   end
 
   # GET /users
