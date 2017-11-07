@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
+  before_action :authenticate_user, only: [:me]
+  
+  def me
+    # return user if authenticate_user passes
+    # knock takes care of the rest
+    render :json => {user: current_user}
+  end
+
   def get_something
     render json: {success: true, something: "Yes" }
   end

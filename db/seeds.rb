@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "======= SEEDING ========"
+puts Rails.env
+
+password  = "helloworld"
+
+User.create!([
+  {email: 'cole@helloworld.com', username: 'bagofcole', password: password, password_confirmation: password}
+])

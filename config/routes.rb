@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'auth/me' => 'users#me'
+
   post 'user_token' => 'user_token#create'
   get 'unauthorized_response' => 'users#unauthorized_response'
   get 'four_o_one' => 'users#four_o_one'
