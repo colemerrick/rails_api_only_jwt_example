@@ -6,10 +6,10 @@ class UsersController < ApplicationController
   end
 
   def unauthorized_response
-    render :status => :unauthorized
+    render status: :unauthorized
   end
   def four_o_one
-    render :status => 401
+    render head: 401
   end
 
   # GET /users
